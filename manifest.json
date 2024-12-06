@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "图片下载器",
+  "description": "收集并下载当前页面的所有图片",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "./icons/icon.png",
+    "48": "./icons/icon.png",
+    "128": "./icons/icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "./icons/icon.png",
+      "48": "./icons/icon.png",
+      "128": "./icons/icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+} 

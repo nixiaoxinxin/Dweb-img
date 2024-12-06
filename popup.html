@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+    }
+    .image-list {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .image-item {
+      margin: 5px 0;
+      padding: 5px;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      will-change: transform;
+    }
+    img {
+      max-width: 100px;
+      height: auto;
+      contain: content;
+    }
+    .download-btn {
+      padding: 3px 8px;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <button id="collectImages">收集图片</button>
+  <button id="downloadAll">下载全部</button>
+  <div id="imageList" class="image-list"></div>
+  <script src="popup.js"></script>
+</body>
+</html> 
